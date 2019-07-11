@@ -1,0 +1,20 @@
+AppBundle\Entity\Paciente:
+    type: entity
+    table: null
+    repositoryClass: AppBundle\Repository\PacienteRepository
+    id:
+        id:
+            type: integer
+            id: true
+            generator:
+                strategy: AUTO
+    fields:
+        nombre:
+            type: string
+            length: 255
+        ci:
+            type: integer
+        historiaClinica:
+            type: string
+            length: 255
+    lifecycleCallbacks: {  }

@@ -1,0 +1,21 @@
+AppBundle\Entity\Cita:
+  type: entity
+  table: null
+  repositoryClass: AppBundle\Repository\CitaRepository
+  id:
+    id:
+      type: integer
+      id: true
+      generator:
+        strategy: AUTO
+  fields:
+    fecha:
+      type: date
+  manyToOne:
+    paciente:
+      targetEntity: AppBundle\Entity\Paciente
+      joinColumn:
+        name: paciente_id
+        referencedColumnName: id
+
+  lifecycleCallbacks: {  }
